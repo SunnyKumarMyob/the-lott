@@ -34,6 +34,14 @@ There are 4 components used in this project
 
 
 
+Before quick selection: 
+![](src/Resources/Before quick selection.png)
+
+
+After quick selection:
+![](src/Resources/After quick selection.png)
+
+
 ## Steps to run the project
 
 1. If npm is not installed, use `npm install` to install node package manager
