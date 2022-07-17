@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.App {
+    padding: 100px 400px;
+    text-align: center;
+}
+
+/* Common */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input {
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    cursor: pointer;
+}
+
+.tag {
+    width: 100%;
+    background-color: #879aa9;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Specific */
+
+.relative {
+    position: relative;
+}
+
+.input-container input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    margin: 0 5px 0 5px;
+}
+
+.button-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.button-container button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 100%;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.button-container button:nth-child(1) {
+    background-color: #6c4493;
+}
+
+.button-container button:nth-child(2) {
+    background-color: #757575;
+}
+
+.button-container button:hover {
+    opacity: 0.8;
+}
+
+.element-contianer div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-selected {
+    color: #745491;
+}
+
+.selected {
+    background-color: #e8e5ef;
+}
+
+.left {
+    justify-content: left !important;
+}
+
+.tenPercent {
+    width: 10%;
+    aspect-ratio: 1 / 1;
+}
+
+.filled {
+    box-shadow: none;
+    color: white;
+    border: 1px solid #3e4f9d;
+}
+
+.quickSelectionList {
+    background-color: #3e4f9d;
+}
+
+.powerBallList {
+    background-color: #8b9aa8;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    z-index: 9;
+}
+
+.centered i {
+    font-size: 60px;
+    color: #d4cbe3;
+}
+
+.inside-element {
+    z-index: 99;
+}
