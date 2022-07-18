@@ -23,7 +23,7 @@ it('Should render PowerBallNumbers component with given power ball list and powe
 });
 
 it('Should render Normal numbers component with given quick select list and quick selection', () => {
-    const quickSelection = [3,4,10,23,55,19,35]
+    const quickSelection = [3,4,10,23,12,19,35]
 
     const wrapper = render(<NormalNumbers quickSelectList={quickSelectList} quickSelection={quickSelection}/>);
     const normalNumbers = wrapper.getByTestId('normalNumbers');
