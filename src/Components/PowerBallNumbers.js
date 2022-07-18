@@ -16,7 +16,7 @@ export const PowerBallNumbers = ({
                 >
                     {props.powerBallSelection === elem && (
                         <div className="centered">
-                            <i class="fa-solid fa-xmark"></i>
+                            <i className="fa-solid fa-xmark"></i>
                         </div>
                     )}
                     <div className="inside-element">{elem}</div>

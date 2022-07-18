@@ -9,7 +9,7 @@ const PowerBallList = Array.from({ length: 20 }, (_, i) => i + 1);
 export default function Main() {
 
     const [quickSelectedNumbers, setQuickSelection] = useState([]);
-    const [powerBallSelectedNumbers, setPowerBallSelection] = useState(null);
+    const [powerBallSelectedNumber, setPowerBallSelection] = useState(null);
     const inputsQuickSelection = Array.from({ length: 7 }, (_, i) => i + 1);
     const quickSelect = () => {
         setQuickSelection([31, 14, 34, 22, 10, 17, 4]);
@@ -35,22 +35,21 @@ export default function Main() {
     }, [quickSelectedNumbers]);
     useEffect(() => {
         let powerBallVal = document.getElementById("inputPowerBallSelection");
-        if (powerBallSelectedNumbers !== null) {
-            powerBallVal.value = powerBallSelectedNumbers;
+        if (powerBallSelectedNumber !== null) {
+            powerBallVal.value = powerBallSelectedNumber;
         } else {
             powerBallVal.value = "PB";
         }
-    }, [powerBallSelectedNumbers]);
+    }, [powerBallSelectedNumber]);
 
     return (
         <div data-testid="MainPage">
             <DrawNumbers
                 inputsQuickSelection={inputsQuickSelection}
                 quickSelection={quickSelectedNumbers}
-                powerBallSelection={powerBallSelectedNumbers}
+                powerBallSelection={powerBallSelectedNumber}
                 quickSelectOnClick={() => quickSelect()}
                 deleteOnClick={() => deleteSelection()}
-                testId="DrawNumbers"
             />
             <NormalNumbers
                 quickSelectList={quickSelectList}
@@ -58,7 +57,7 @@ export default function Main() {
             />
             <PowerBallNumbers
                 powerBallList={PowerBallList}
-                powerBallSelection={powerBallSelectedNumbers}
+                powerBallSelection={powerBallSelectedNumber}
             />
         </div>
     );
